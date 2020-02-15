@@ -10,9 +10,9 @@ import UIKit
 import HexColor
 
 public extension UIColor {
-    static func fromHexString(hex: String, alpha: CGFloat? = nil) -> UIColor? {
-        guard let integer = HexColor.intFromHexString(hex: hex) else { return nil }
-        let components = HexColor.rgbaFromInt(integer: integer)
+    static func fromHexString(_ hex: String, alpha: CGFloat? = nil) -> UIColor? {
+        guard let integer = HexColor.intFromHexString(hex) else { return nil }
+        let components = HexColor.rgbaFromInt(integer)
         
         if let alpha = alpha {
             return UIColor(

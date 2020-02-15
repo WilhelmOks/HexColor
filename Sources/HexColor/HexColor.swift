@@ -15,7 +15,7 @@ public struct HexColor {
     
     private static let invalidHexCharactersSet = CharacterSet(charactersIn: "0123456789abcdefABCDEF").inverted
     
-    public static func intFromHexString(hex: String) -> UInt32? {
+    public static func intFromHexString(_ hex: String) -> UInt32? {
         var s = hex.trimmingCharacters(in: .whitespacesAndNewlines)
         
         guard !s.isEmpty else {
@@ -54,7 +54,7 @@ public struct HexColor {
         return rgb
     }
     
-    public static func rgbaFromInt(integer: UInt32) -> (r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat) {
+    public static func rgbaFromInt(_ integer: UInt32) -> (r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat) {
         let maxValue = CGFloat(255)
         return (
             r: CGFloat((integer & 0xFF000000) >> 24) / maxValue,

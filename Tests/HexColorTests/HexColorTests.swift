@@ -9,12 +9,12 @@ import XCTest
 
 final class HexColorTests: XCTestCase {
     func testIntegerConversion() {
-        let color = HexColor.intFromHexString(hex: "#f5ab78")
-        let colorWithExplicitAlpha = HexColor.intFromHexString(hex: "#f5ab78d2")
-        let colorWithoutHash = HexColor.intFromHexString(hex: "f5ab78")
-        let colorWithExplicitAlphaWithoutHash = HexColor.intFromHexString(hex: "f5ab78d2")
-        let colorUppercase = HexColor.intFromHexString(hex: "F5AB78D2")
-        let colorDifferentCase = HexColor.intFromHexString(hex: "f5ab78D2")
+        let color = HexColor.intFromHexString("#f5ab78")
+        let colorWithExplicitAlpha = HexColor.intFromHexString("#f5ab78d2")
+        let colorWithoutHash = HexColor.intFromHexString("f5ab78")
+        let colorWithExplicitAlphaWithoutHash = HexColor.intFromHexString("f5ab78d2")
+        let colorUppercase = HexColor.intFromHexString("F5AB78D2")
+        let colorDifferentCase = HexColor.intFromHexString("f5ab78D2")
         
         XCTAssertEqual(color, 0xf5ab78ff)
         XCTAssertEqual(colorWithExplicitAlpha, 0xf5ab78d2)
@@ -25,12 +25,12 @@ final class HexColorTests: XCTestCase {
     }
     
     func testIntegerConversionFromShorthand() {
-        let color = HexColor.intFromHexString(hex: "#5ad")
-        let colorWithExplicitAlpha = HexColor.intFromHexString(hex: "#5adc")
-        let colorWithoutHash = HexColor.intFromHexString(hex: "5ad")
-        let colorWithExplicitAlphaWithoutHash = HexColor.intFromHexString(hex: "5adc")
-        let colorUppercase = HexColor.intFromHexString(hex: "5ADC")
-        let colorDifferentCase = HexColor.intFromHexString(hex: "5AdC")
+        let color = HexColor.intFromHexString("#5ad")
+        let colorWithExplicitAlpha = HexColor.intFromHexString("#5adc")
+        let colorWithoutHash = HexColor.intFromHexString("5ad")
+        let colorWithExplicitAlphaWithoutHash = HexColor.intFromHexString("5adc")
+        let colorUppercase = HexColor.intFromHexString("5ADC")
+        let colorDifferentCase = HexColor.intFromHexString("5AdC")
         
         XCTAssertEqual(color, 0x55aaddff)
         XCTAssertEqual(colorWithExplicitAlpha, 0x55aaddcc)
@@ -41,14 +41,14 @@ final class HexColorTests: XCTestCase {
     }
     
     func testIntegerConversionStringInvalid() {
-        let color1 = HexColor.intFromHexString(hex: "#f5ab78d25")
-        let color2 = HexColor.intFromHexString(hex: "#f5ab78d")
-        let color3 = HexColor.intFromHexString(hex: "#f5")
-        let color4 = HexColor.intFromHexString(hex: "f5")
-        let color5 = HexColor.intFromHexString(hex: "12345")
-        let colorInvalidPrefix = HexColor.intFromHexString(hex: "##f5ab78")
-        let colorInvalidPrefix2 = HexColor.intFromHexString(hex: "##f5ab7")
-        let colorInvalidChars = HexColor.intFromHexString(hex: "#f5ag78") // g is not valid
+        let color1 = HexColor.intFromHexString("#f5ab78d25")
+        let color2 = HexColor.intFromHexString("#f5ab78d")
+        let color3 = HexColor.intFromHexString("#f5")
+        let color4 = HexColor.intFromHexString("f5")
+        let color5 = HexColor.intFromHexString("12345")
+        let colorInvalidPrefix = HexColor.intFromHexString("##f5ab78")
+        let colorInvalidPrefix2 = HexColor.intFromHexString("##f5ab7")
+        let colorInvalidChars = HexColor.intFromHexString("#f5ag78") // g is not valid
         
         XCTAssertNil(color1)
         XCTAssertNil(color2)
