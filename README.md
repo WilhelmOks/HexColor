@@ -6,6 +6,8 @@
 
 Convert hex strings to NSColor or UIColor
 
+HexColor is a small library that converts colors from hex notation (e.g. #eb5e34) to the commonly used standard color objects NSColor (for macOS) or UIColor (for iOS, tvOS and watchOS). 
+
 ## Usage
 
 Call the static function `fromHexString` on `NSColor` and pass a string containing a hex color value:
@@ -41,6 +43,16 @@ You can convert to `UIColor` with the same code that is provided for `NSColor`:
 
 ```swift
 let color = UIColor.fromHexString(hex: "#eb5e34") ?? .white
+```
+
+If you need the colors to be converted to more general structures, you can use the functions defined in the `HexColor` struct (needs `import HexColor`):
+
+```swift
+let integer = HexColor.intFromHexString(hex: "eb5e34") //returns the integer value 0xeb5e34ff
+```
+
+```swift
+let (r, g, b, a) = HexColor.rgbaFromInt(integer: 0xeb5e34ff) //returns a tuple containing the (r,g,b,a) CGFloat color components 
 ```
 
 ## Installation
