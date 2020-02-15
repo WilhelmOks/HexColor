@@ -1,3 +1,9 @@
+/**
+*  HexColor
+*  Copyright (c) Wilhelm Oks 2020
+*  Licensed under the MIT license (see LICENSE file)
+*/
+
 #if os(macOS)
 
 import AppKit
