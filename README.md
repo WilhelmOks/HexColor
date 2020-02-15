@@ -18,39 +18,39 @@ Invalid hex color codes will result in `nil`. You can use the `??` syntax to def
 
 The `#` character in the hex string is optional and can be omitted:
 ```swift
-let color = NSColor.fromHexString(hex: "eb5e34")
+let color = NSColor.fromHexString("eb5e34")
 ```
 
 The shorthand 3 digit notation can be used, too:
 ```swift
-let color = NSColor.fromHexString(hex: "e53") // same hex color code as "ee5533"
+let color = NSColor.fromHexString("e53") // same hex color code as "ee5533"
 ```
 
 The alpha channel is taken from the hex string, if available:
 ```swift
-let color = NSColor.fromHexString(hex: "eb5e34cc") // the "cc" will convert to the alpha value 0.8
+let color = NSColor.fromHexString("eb5e34cc") // the "cc" will convert to the alpha value 0.8
 ```
 If not available, it is assumed to be "ff" and the alpha value will be 1.
 
 The alpha value can be set explicitly. In this case, the alpha part from the hex string is ignored:
 ```swift
-let color = NSColor.fromHexString(hex: "eb5e34cc", alpha: 0.5) // ignores "cc" and uses alpha value 0.5
+let color = NSColor.fromHexString("eb5e34cc", alpha: 0.5) // ignores "cc" and uses alpha value 0.5
 ```
 
 You can convert to `UIColor` with the same code that is provided for `NSColor`:
 
 ```swift
-let color = UIColor.fromHexString(hex: "#eb5e34") ?? .white
+let color = UIColor.fromHexString("#eb5e34") ?? .white
 ```
 
 If you need the colors to be converted to more general structures, you can use the functions defined in the `HexColor` struct (needs `import HexColor`):
 
 ```swift
-let integer = HexColor.intFromHexString(hex: "#eb5e34") //returns the integer value 0xeb5e34ff
+let integer = HexColor.intFromHexString("#eb5e34") //returns the integer value 0xeb5e34ff
 ```
 
 ```swift
-let (r, g, b, a) = HexColor.rgbaFromInt(integer: 0xeb5e34ff) //returns a tuple containing the (red, green, blue, alpha) CGFloat color components 
+let (r, g, b, a) = HexColor.rgbaFromInt(0xeb5e34ff) //returns a tuple containing the (red, green, blue, alpha) CGFloat color components 
 ```
 
 ## Installation
