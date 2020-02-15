@@ -60,7 +60,7 @@ let (r, g, b, a) = HexColor.rgbaFromInt(0xeb5e34ff) //returns a tuple containing
 This library is a Swift Module and can be used as a dependency in the `Package.swift` file:
 
 ```
-.package(url: "https://github.com/WilhelmOks/HexColor.git", from: "1.0.0")
+.package(url: "https://github.com/WilhelmOks/HexColor.git", from: "1.0.1")
 ```
 
 `import HexNSColor` on macOS or `import HexUIColor` on iOS/tvOS/watchOS.
