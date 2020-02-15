@@ -8,19 +8,22 @@ Convert hex strings to NSColor or UIColor
 
 ## Usage
 
+Call the static function `fromHexString` on `NSColor` and pass a string containing a hex color value:
 ```swift
 let color = NSColor.fromHexString(hex: "#eb5e34") ?? .white
 ```
+The function returns an `NSColor` object.
+
 Invalid hex color codes will result in `nil`. You can use the `??` syntax to default to another color in that case.
 
-The `#` character is optional and can be omitted:
+The `#` character in the hex string is optional and can be omitted:
 ```swift
 let color = NSColor.fromHexString(hex: "eb5e34")
 ```
 
-The shorthand 3 digit syntax can be used, too:
+The shorthand 3 digit notation can be used, too:
 ```swift
-let color = NSColor.fromHexString(hex: "e53") // same hex code as "ee5533"
+let color = NSColor.fromHexString(hex: "e53") // same hex color code as "ee5533"
 ```
 
 The alpha channel is taken from the hex string, if available:
