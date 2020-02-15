@@ -10,7 +10,7 @@ HexColor is a small library that converts colors from hex notation (e.g. #eb5e34
 
 Call the static function `fromHexString` on `NSColor` and pass a string containing a hex color value:
 ```swift
-let color = NSColor.fromHexString(hex: "#eb5e34") ?? .white
+let color = NSColor.fromHexString("#eb5e34") ?? .white
 ```
 The function returns an `NSColor` object.
 
