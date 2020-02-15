@@ -4,9 +4,7 @@
 
 # #️⃣ HexColor
 
-Convert hex strings to NSColor or UIColor
-
-HexColor is a small library that converts colors from hex notation (e.g. #eb5e34) to the commonly used standard color objects NSColor (for macOS) or UIColor (for iOS, tvOS and watchOS). 
+HexColor is a small library that converts colors from hex notation (e.g. #eb5e34) to the commonly used standard color objects NSColor (for macOS) or UIColor (for iOS, tvOS and watchOS).
 
 ## Usage
 
