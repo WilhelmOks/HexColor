@@ -2,6 +2,40 @@
 
 Convert hex strings to UIColor or NSColor
 
+## Usage
+
+```swift
+let color = NSColor.fromHexString(hex: "#eb5e34") ?? .white
+```
+Invalid hex color codes will result in `nil`. You can use the `??` syntax to default to another color in that case.
+
+The `#` character is optional and can be omitted:
+```swift
+let color = NSColor.fromHexString(hex: "eb5e34")
+```
+
+The shorthand 3 digit syntax can be used, too:
+```swift
+let color = NSColor.fromHexString(hex: "e53") // same hex code as "ee5533"
+```
+
+The alpha channel is taken from the hex string, if available:
+```swift
+let color = NSColor.fromHexString(hex: "eb5e34cc") // the "cc" will convert to the alpha value 0.8
+```
+If not available, it is assumed to be "ff" and the alpha value will be 1.
+
+The alpha value can be set explicitly. In this case, the alpha part from the hex string is ignored:
+```swift
+let color = NSColor.fromHexString(hex: "eb5e34cc", alpha: 0.5)
+```
+
+You can convert to `UIColor` with the same code that is provided for `NSColor`:
+
+```swift
+let color = UIColor.fromHexString(hex: "#eb5e34") ?? .white
+```
+
 ## Installation
 
 ### Swift Package Manager
