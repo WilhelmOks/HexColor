@@ -41,7 +41,7 @@ The alpha value can be set explicitly. In this case, the alpha part from the hex
 let color = NSColor.fromHexString("eb5e34cc", alpha: 0.5) // ignores "cc" and uses alpha value 0.5
 ```
 
-You can convert to `UIColor` with the same code that is provided for `NSColor`:
+You can convert to `UIColor` with the same function that is provided for `NSColor`:
 
 ```swift
 let color = UIColor.fromHexString("#eb5e34") ?? .white
