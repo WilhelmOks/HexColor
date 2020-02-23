@@ -61,7 +61,7 @@ let (r, g, b, a) = HexColor.rgbaFromInt(0xeb5e34ff) //returns a tuple containing
 
 ### Swift Package Manager
 
-This library is a Swift Module and can be used as a dependency in the `Package.swift` file:
+This library is a Swift Module and can be used as a dependency in a `Package.swift` file:
 
 ```
 .package(url: "https://github.com/WilhelmOks/HexColor.git", from: "1.0.1")
