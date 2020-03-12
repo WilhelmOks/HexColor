@@ -26,7 +26,6 @@ public struct HexColor {
             s = String(s.dropFirst())
         }
         
-        // TODO: This check might be expensive. Maybe check performance.
         guard s.rangeOfCharacter(from: invalidHexCharactersSet) == nil else {
             return nil
         }
