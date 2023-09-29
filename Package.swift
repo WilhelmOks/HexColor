@@ -6,8 +6,8 @@ import PackageDescription
 let package = Package(
     name: "HexColor",
     platforms: [
-        .macOS(.v10_10),
-        .iOS(.v9),
+        .macOS(.v10_15),
+        .iOS(.v13),
     ],
     products: [
         .library(
